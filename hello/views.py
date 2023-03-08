@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse 
 
 # Create your views here.
 
@@ -11,5 +10,5 @@ def index(request):
 
 
 def greet(request,name):
-    nameso = ['mo3z','niga abdo','tall niger ahmed']
-    return render(request, 'hello/name.html',{'name':name,'nameso':nameso})
+    nameso = {'name1': 'moaz','name2':'ahmed','name3':'abdo'}
+    return render(request, 'hello/name.html',{'nameso':nameso,'name':name})
